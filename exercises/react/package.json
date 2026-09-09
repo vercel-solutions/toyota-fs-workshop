@@ -1,0 +1,39 @@
+{
+  "name": "@workshop/react-exercise",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@tailwindcss/postcss": "4.0.9",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "geist": "^1.5.1",
+    "lucide-react": "^0.475.0",
+    "next": "^16.3.0",
+    "postcss": "^8.5.6",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "4.0.9",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@workshop/linter": "workspace:*",
+    "babel-plugin-react-compiler": "19.0.0-beta-e1e972c-20250221",
+    "eslint": "^10.8.1",
+    "tailwindcss": "^4",
+    "typescript": "^7.0.2"
+  }
+}
