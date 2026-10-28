@@ -1,0 +1,6 @@
+packages:
+  - "packages/*"
+  - "exercises/*"
+allowBuilds:
+  '@tailwindcss/oxide': true
+  esbuild: true

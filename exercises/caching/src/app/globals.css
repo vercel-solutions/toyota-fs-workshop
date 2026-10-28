@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+/*
+ * Toyota Financial Services — TFS Storefront theme
+ *
+ * Light gray canvas, white cards, near-black nav and CTAs, Toyota red as the
+ * single accent. Grays + red only — no other accent hues.
+ *
+ * Accessibility note: Toyota red (#EB0A1E) clears 4.5:1 on white but only
+ * 3.8:1 on the gray canvas, so it is reserved for large/bold text, badges
+ * (white on red = 4.6:1) and non-text accents. Use `text-brand-strong`
+ * (#C20817, 5.3:1 on the canvas) for small red text.
+ */
+:root {
+  --brand: #eb0a1e;
+  --brand-foreground: #ffffff;
+  --brand-strong: #c20817;
+
+  --background: oklch(93.5% 0 0);
+  --foreground: oklch(15% 0 0);
+  --card: oklch(100% 0 0);
+  --card-foreground: oklch(15% 0 0);
+  --popover: oklch(100% 0 0);
+  --popover-foreground: oklch(15% 0 0);
+  --primary: oklch(15% 0 0);
+  --primary-foreground: oklch(100% 0 0);
+  --secondary: oklch(97% 0 0);
+  --secondary-foreground: oklch(15% 0 0);
+  --muted: oklch(90% 0 0);
+  --muted-foreground: oklch(45% 0 0);
+  --accent: oklch(87% 0 0);
+  --accent-foreground: oklch(15% 0 0);
+  --destructive: #c20817;
+  --destructive-foreground: oklch(100% 0 0);
+  --border: oklch(85% 0 0);
+  --input: oklch(85% 0 0);
+  --ring: #eb0a1e;
+  --radius: 0.875rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #ff2b3d;
+    --brand-foreground: oklch(12% 0 0);
+    --brand-strong: #ff5a68;
+
+    --background: oklch(12% 0 0);
+    --foreground: oklch(98% 0 0);
+    --card: oklch(17% 0 0);
+    --card-foreground: oklch(98% 0 0);
+    --popover: oklch(17% 0 0);
+    --popover-foreground: oklch(98% 0 0);
+    --primary: oklch(98% 0 0);
+    --primary-foreground: oklch(12% 0 0);
+    --secondary: oklch(21% 0 0);
+    --secondary-foreground: oklch(98% 0 0);
+    --muted: oklch(21% 0 0);
+    --muted-foreground: oklch(68% 0 0);
+    --accent: oklch(27% 0 0);
+    --accent-foreground: oklch(98% 0 0);
+    --destructive: #ff5a68;
+    --destructive-foreground: oklch(12% 0 0);
+    --border: oklch(27% 0 0);
+    --input: oklch(27% 0 0);
+    --ring: #ff2b3d;
+  }
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-strong: var(--brand-strong);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+}
